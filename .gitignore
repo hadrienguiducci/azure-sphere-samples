@@ -15,3 +15,7 @@ Output/
 *.settings
 [Dd]ebug/
 [Rr]elease/
+
+Samples/AzureIoT/CAcertificate.cer
+
+Samples/AzureIoT/app_manifest.json

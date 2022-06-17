@@ -157,14 +157,14 @@ static void SetThermometerTelemetryUploadEnabled(bool uploadEnabled)
 
 static void DeviceMoved(void)
 {
-    Log_Debug("INFO: Device moved.\n");
+    Log_Debug("INFO: Button B of device - pressed start IoT Event.\n");
 
     time_t now;
     time(&now);
 
     Cloud_Result result = Cloud_SendThermometerMovedEvent(now);
     if (result != Cloud_Result_OK) {
-        Log_Debug("WARNING: Could not send thermometer moved event to cloud: %s\n",
+        Log_Debug("WARNING: Could not send button B clicked event to cloud: %s\n",
                   CloudResultToString(result));
     }
 }
