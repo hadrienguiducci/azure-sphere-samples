@@ -132,7 +132,7 @@ Cloud_Result Cloud_SendThermometerMovedEvent(time_t timestamp)
 
     JSON_Value *thermometerMovedValue = json_value_init_object();
     JSON_Object *thermometerMovedRoot = json_value_get_object(thermometerMovedValue);
-    json_object_dotset_boolean(thermometerMovedRoot, "thermometerMoved", 1);
+    json_object_dotset_boolean(thermometerMovedRoot, "errorInIoTProduct", 1);
     char *serializedDeviceMoved = json_serialize_to_string(thermometerMovedValue);
     AzureIoT_Result aziotResult = AzureIoT_SendTelemetry(serializedDeviceMoved, utcDateTime, NULL);
     Cloud_Result result = AzureIoTToCloudResult(aziotResult);

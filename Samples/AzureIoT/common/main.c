@@ -25,6 +25,8 @@
 // You will need to provide information in the application manifest to use this application. Please
 // see README.md and the other linked documentation for full details.
 
+//azsphere device rescan-attached to reattach chips
+
 #include <ctype.h>
 #include <errno.h>
 #include <signal.h>
